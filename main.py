@@ -21,7 +21,7 @@ def gradient_descent(b_current, m_current, rate, points):
         x = points.iloc[i].studytime
         y = points.iloc[i].score
         m_gradient += -(2/N) * (x *(y-(m_current*x + b_current)))
-        b_gradient += -(2/N) * (y-m_current*x + b_current) 
+        b_gradient += -(2/N) * (y- (m_current*x + b_current))
 
     m_new = m_current - rate * m_gradient
     b_new = b_current - rate * b_gradient
